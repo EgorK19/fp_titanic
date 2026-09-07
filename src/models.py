@@ -45,7 +45,7 @@ def build_preprocessor_tree_simple() -> ColumnTransformer:
 
 
 def build_preprocessor_final_features() -> Pipeline:
-    """Препроцессор бустингов"""
+    """препроцессор бустингов"""
     return Pipeline(
         [
             ("dtypes", DtypesTransformer()),
@@ -84,7 +84,7 @@ def build_preprocessor_final_features() -> Pipeline:
 
 
 def build_preprocessor_nn_features() -> Pipeline:
-    """Препроцессор нейросети"""
+    """препроцессор нейросети"""
     return Pipeline(
         [
             ("dtypes", DtypesTransformer()),

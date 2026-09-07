@@ -150,7 +150,7 @@ def log_experiment(model_name: str, metrics: dict, note: str = ""):
     }
 
     with open(log_file_path, "a", encoding="utf-8") as f:
-        f.write(json.dumps(record, default=str) + "\n")
+        f.write(json.dumps(record, default=str, ensure_ascii=False) + "\n")
 
 
 def make_submit(
