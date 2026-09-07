@@ -19,5 +19,5 @@
         }
     },
     // --- Type Checking ---
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "off"
 }
