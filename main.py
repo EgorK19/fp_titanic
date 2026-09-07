@@ -1,20 +1,7 @@
 """
 Точка входа пайплайна.
-
-Запуск:
-    python main.py                          # всё, что перечислено в run.models конфига
-    python main.py --models baseline best_lgbm
-    python main.py --submit-for all         # переопределить run.make_submission_for
-
-Что делает:
-    1. Берёт cfg из src.config (пути + models + run + cv - всё в одном месте) и
-       грузит train/test.
-    2. Для каждой модели из реестра (src/models.py) собирает preprocessor + estimator
-       и гоняет её по CV (cv_result для sklearn-моделей, nn_cv_result для NN).
-    3. Собирает единую таблицу метрик по всем моделям.
-    4. Выбирает победителя по run.selection_metric (по умолчанию OOF_acc).
-    5. Делает сабмит для победителя (или всех/списка - см. run.make_submission_for)
-       и сохраняет таблицу метрик в paths.output.
+Не до коднца разобарлся с назначением, поэтому часть с config, main, modules получилась довольно вымученной
+Я вроде нормально в ipynb файлах все крутил и проверял, этот main файл скорее нужен для финального решения или просто для удобства проверки?
 """
 
 from __future__ import annotations
